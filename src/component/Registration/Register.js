@@ -3,7 +3,7 @@ import './registration.css';
 import axios from 'axios';
 import {Link} from "react-router-dom";
 import { withRouter } from "react-router-dom";
-import { Container , Row, Col,Form,FormGroup, Button, FormLabel } from "react-bootstrap";
+import { Container , Row, Col, Form, FormGroup, Button, FormLabel } from "react-bootstrap";
 const option = [
     {
         label : "choose__type"
@@ -56,7 +56,7 @@ class Register extends Component{
                              <FormGroup>
                                  <div className="register__logoContainer">
                                      <Link to="/">
-                                         <img src={logo} className="register__logo"/>
+                                         <img src="" className="register__logo"/>
                                      </Link>
                                  </div>
                                  <div className="register__name">

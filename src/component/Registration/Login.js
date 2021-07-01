@@ -43,26 +43,26 @@ class Login extends Component{
                         <Form className = "login__form" >
                             <div className="register__logoContainer">
                                 <Link to="/">
-                                    <img src={logo} className="register__logo"/>
+                                    <img src="" className="register__logo"/>
                                 </Link>
                             </div>
                             <FormGroup>
                                 <FormLabel className="login__label">Email</FormLabel>
-                                <input className="form-control" type="email" placeholder="Email" name="email" value={this.state.email} onChange={this.changeHandler} />
+                                <input className="form-control rounded" type="email" placeholder="Email" name="email" value={this.state.email} onChange={this.changeHandler} />
                                 <FormLabel className="login__label">Password</FormLabel>
-                                <input className="form-control" type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/>
+                                <input className="form-control rounded" type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/>
                                 <FormCheck >
                                     <input type="checkbox" className="login__checkbox"/>
                                     <FormLabel className="form-check-label login__label" >Remember Me</FormLabel> 
                                 </FormCheck>   
                             </FormGroup>
-                            <Button className ="btn-lg btn-block login__button" onClick={this.submitLogin}>Login</Button>
+                            <Button className ="btn-lg btn-block login__button rounded" onClick={this.submitLogin}>Login</Button>
                             <div className="text-center pt-3 login__label">Or Continue with your social account</div>
                             <GoogleLoginButton className="mt-3 mb-3" />
                             <div className="text-center">
-                                <Link to="/signup" className="login__label">Sign up</Link>
-                               <span className="p-2 login__label">|</span>
-                               <Link to="/signup" className="login__label">Forget Password?</Link>
+                                <Link to="/signup" className="login__label text-center">Sign up</Link>
+                               <span className="login__label text-center">|</span>
+                               <Link to="/signup" className="login__label text-center">Forget Password?</Link>
                             </div>
                         </Form>
                     </Col>

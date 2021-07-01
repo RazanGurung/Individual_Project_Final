@@ -1,57 +1,76 @@
-import React from 'react';
-import  'jquery';
-import "../css/aos.css";
-import "../css/style.css";
-
+import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
+import { Button } from '../Design/Button';
+import './header.css';
 
 function Header() {
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+        setButton(false);
+        } else {
+        setButton(true);
+        }
+    };
+    useEffect(() => {
+        showButton();
+    }, []);
+    window.addEventListener('resize', showButton);
     return (
-        <div className="site-wrap">
-            <div className="site-mobile-menu">
-                <div className="site-mobile-menu-header">
-                    <div className="site-mobile-menu-close mt-3">
-                    <span className="icon-close2 js-menu-toggle"></span>
+        <>
+            <nav className='web-navbar'>
+                <div className="web-navbar-container">
+                    <Link to='/' className='web-navbar-logo' >
+                        Logistic<i class='fab fa-typo3' />
+                    </Link>
+                    <div className='web-menu-icon' onClick={handleClick}>
+                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
+                    <ul className={click ? 'web-nav-menu active' : 'web-nav-menu'}>
+                        <li className='web-nav-item'>
+                        <Link to='/' className='web-nav-links' onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                        </li>
+                        <li className='web-nav-item'>
+                        <Link
+                            to='/services'
+                            className='web-nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            Services
+                        </Link>
+                        </li>
+                        <li className='web-nav-item'>
+                        <Link
+                            to='/contact'
+                            className='web-nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            Contacts
+                        </Link>
+                        </li>
+
+                        <li>
+                        <Link
+                            to='/sign-up'
+                            className='web-nav-links-mobile'
+                            onClick={closeMobileMenu}
+                        >
+                            Sign Up
+                        </Link>
+                        </li>
+                    </ul>
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
-                <div className="site-mobile-menu-body"></div>
-            </div>
-            <header className="site-navbar py-3" role="banner">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-11 col-xl-2">
-                            <h1 className="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
-                        </div>
-                        <div className="col-12 col-md-10 d-none d-xl-block">
-                            <nav className="site-navigation position-relative text-right" role="navigation">
-                                <ul className="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                                    <li className="active"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li className="has-children">
-                                        <a href="services.html">Services</a>
-                                        <ul className="dropdown">
-                                            <li><a href="#">Air Freight</a></li>
-                                            <li><a href="#">Ocean Freight</a></li>
-                                            <li><a href="#">Ground Shipping</a></li>
-                                            <li><a href="#">Warehousing</a></li>
-                                            <li><a href="#">Storage</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="industries.html">Industries</a></li>
-                                    <li><a href="blog.html">Login</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style={{position: 'relative', top: '3px'}}>
-                            <a href="#" className="site-menu-toggle js-menu-toggle text-white">
-                                <span className="icon-menu h3"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </div>
+            </nav>
+        </>
     )
 }
 
-export default Header;
+export default Header
