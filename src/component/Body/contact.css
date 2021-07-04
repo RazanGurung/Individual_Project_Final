@@ -10,7 +10,7 @@
     background-image: url('https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-size: cover;
 }
-h1, p{
+.contact h1, p{
     color: white;
     margin-bottom: 20px;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6) ;
@@ -37,7 +37,7 @@ h1, p{
     flex-direction: column;
     text-align: left;
 }
-h4{
+.contact-info h4{
     font-size:1.7rem;
     font-weight: 500;
     margin: 0;
@@ -131,7 +131,7 @@ form{
 .right{
     align-items: flex-end !important;
 }
-button{
+.form-group button{
     width: 170px;
     height: 50px;
     cursor: pointer;
