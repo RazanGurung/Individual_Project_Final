@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import Header from './component/Header/Header';
 import Footer from './component/Footer/Footer';
 import Login from './component/Registration/Login';
+import Admin from './component/Registration/AdminLogin';
 import Home from './component/Body/Home';
 import Register from './component/Registration/Register';
 import  Cards  from './component/Design/Cards';
@@ -13,6 +14,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+        <Route path="/admin">
+            <Admin />
+          </Route>
           <Route path="/sign-in">
             <Header/>
             <Login />
