@@ -17,7 +17,8 @@ function EmailVerification() {
     }
     return (
         <div className="email-verification-container">
-            <h1>Verify Your Email</h1>
+            <h1>Please Verify Your Email</h1>
+            <p>Click verify button to verify your email.</p>
             <button onClick={VerifyEmail}>Verify Email</button>
         </div>
     )

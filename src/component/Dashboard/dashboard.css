@@ -1,0 +1,60 @@
+.dashboard-container{
+    width: 1050px;
+    height: auto;
+    min-height: 90vh;
+    margin: auto;
+    padding: 0 20px;
+}
+.dashboard-add-post{
+    width: 100%;
+    height: 100px;
+    background: rgb(214, 212, 212);
+    margin-top: 30px;
+    border-radius: 7px 7px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.dashboard-add-post button{
+    height: 50px;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    background: #000;
+}
+.dashboard-post{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(206, 205, 205);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.dashboard-post-individual{
+    height: auto;
+    width: 300px;
+    box-shadow: 9px 7px 6px 1px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 9px 7px 6px 1px rgba(0,0,0,0.43);
+    -moz-box-shadow: 9px 7px 6px 1px rgba(0,0,0,0.43);
+    padding: 10px;
+    padding-top: 20px;
+    border: 1px solid rgb(226, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+.dashboard-post-items{
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+.dashboard-post-items h4{
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: center;
+}

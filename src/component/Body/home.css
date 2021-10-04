@@ -7,7 +7,6 @@ video {
   }
   
   .hero-container {
-    /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -77,7 +76,9 @@ video {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+  background-size: cover;
+  background-image: url("https://images.all-free-download.com/images/graphicthumb/blue_abstract_background_310971.jpg");
+}  
 .email-verification-container h1{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
@@ -95,4 +96,38 @@ video {
 }
 .email-verification-container p{
   color: black;
+}
+.image-verification{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+.update-container{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+  background: rgb(226, 224, 224);
+  padding: 20px;
+  border-radius: 5px;
+}
+.update-container h2{
+  text-align: center;
+}
+.update-container label{
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+.update-container input{
+  height: 35px;
+  border: none;
+  outline: none;
+  padding-left:10px ;
+}
+.update-container button{
+  color: white;
+  background: #000;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

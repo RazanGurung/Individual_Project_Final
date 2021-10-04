@@ -19,9 +19,10 @@ function Login() {
             history.push("/my/order")
             localStorage.setItem("id",response.data.data._id)
             localStorage.setItem("token",response.data.token)
-            localStorage.setItem("profile",response.data.token)
+            localStorage.setItem("email",response.data.email)
+            localStorage.setItem("username",response.data.data.firstname+ " " + response.data.data.lastname)
         }).catch(err=>{
-            console.log(err);
+            alert("Invalid Login");
         })
     }
     return (

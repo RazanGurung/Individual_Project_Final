@@ -13,15 +13,44 @@ import MyOrder from './component/Dashboard/MyOrder';
 import VerficationInfo from './component/Body/VerficationInfo';
 import Service from './component/Service/Service';
 import Dashnav from './component/Dashboard/Header/Dashnav';
+import Account from './component/Dashboard/Account/Account';
+import PostDelivery from './component/Dashboard/PostDelivery';
+import PasswordInfo from './component/Body/PasswordInfo';
+
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/update/password/info">
+            <Dashnav />
+            <PasswordInfo />
+            <Footer />
+          </Route>
           <Route path="/my/order">
             <Dashnav />
             <MyOrder />
+            <Footer />
+          </Route>
+          <Route path="/my/account">
+            <Dashnav />
+            <Account />
+            <Footer />
+          </Route>
+          <Route path="/our/service">
+            <Dashnav />
+            <Service />
+            <Footer />
+          </Route>
+          <Route path="/add/delivery">
+            <Dashnav />
+            <PostDelivery />
+            <Footer />
+          </Route>
+          <Route path="/our/contact">
+            <Dashnav />
+            <Contact />
             <Footer />
           </Route>
           <Route path="/verify/info">

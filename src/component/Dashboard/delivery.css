@@ -1,0 +1,31 @@
+.delivery-add-form{
+    width: 1000px;
+    min-height: auto;
+    margin: auto;
+    padding: 30px;
+    background: rgb(219, 217, 217);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+.delivery-add-form button{
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    color: white;
+    background: rgb(56, 55, 55);
+}
+.register__option{
+    display: flex;
+    flex-direction: column;
+    margin-top:15px ;
+}
+.register__option input{
+    height: 35px;
+    margin-top: 7px;
+    outline:none;
+    border: none;
+    padding-left: 20px;
+}
