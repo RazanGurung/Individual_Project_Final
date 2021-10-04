@@ -70,4 +70,29 @@ video {
       width: 100%;
     }
   }
-  
+.email-verification-container{
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.email-verification-container h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  margin: 30px;
+}
+.email-verification-container button{
+  height: 40px;
+  width: 300px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background: rgb(2, 66, 2);
+  color: #fff;
+  border-radius: 30px;
+}
+.email-verification-container p{
+  color: black;
+}

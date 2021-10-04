@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../Design/Button';
 import './header.css';
 
@@ -22,8 +22,7 @@ function Header() {
     }, []);
     window.addEventListener('resize', showButton);
     return (
-        <>
-            <nav className='web-navbar'>
+        <nav className='web-navbar'>
                 <div className="web-navbar-container">
                     <Link to='/' className='web-navbar-logo' >
                         Logistic<i class='fab fa-typo3' />
@@ -33,43 +32,21 @@ function Header() {
                     </div>
                     <ul className={click ? 'web-nav-menu active' : 'web-nav-menu'}>
                         <li className='web-nav-item'>
-                        <Link to='/' className='web-nav-links' onClick={closeMobileMenu}>
-                            Home
-                        </Link>
+                            <NavLink to='/' exact activeClassName="active" className='web-nav-links' onClick={closeMobileMenu}>Home</NavLink>
                         </li>
                         <li className='web-nav-item'>
-                        <Link
-                            to='/services'
-                            className='web-nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            Services
-                        </Link>
+                            <NavLink to='/services' exact activeClassName="active" className='web-nav-links' onClick={closeMobileMenu}>Services</NavLink>
                         </li>
                         <li className='web-nav-item'>
-                        <Link
-                            to='/contact'
-                            className='web-nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            Contacts
-                        </Link>
+                            <NavLink to='/contact' exact activeClassName="active" className='web-nav-links' onClick={closeMobileMenu}>Contacts</NavLink>
                         </li>
-
                         <li>
-                        <Link
-                            to='/sign-in'
-                            className='web-nav-links-mobile'
-                            onClick={closeMobileMenu}
-                        >
-                            Sign IN
-                        </Link>
+                            <NavLink to='/sign-in' exact activeClassName="active" className='web-nav-links-mobile' onClick={closeMobileMenu}>Sign IN</NavLink>
                         </li>
                     </ul>
                     {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
                 </div>
             </nav>
-        </>
     )
 }
 

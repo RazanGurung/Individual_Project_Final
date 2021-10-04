@@ -21,10 +21,9 @@ function Register() {
             password:password
         }
         axios.post("http://localhost:8000/user/register",data).then(response=>{
-            alert("Registration Successful")
-            history.push("/sign-in")
+            history.push("/verify/info")
         }).catch(err=>{
-            console.log(err);
+            alert("Email Already Used")
         })
     }
 
@@ -32,7 +31,7 @@ function Register() {
         <div className="form-container">
             <div className="form-register">
                 <h1>Sign Up</h1>
-                <p>Connect with us to use our Services</p>
+                <p style={{color:"black"}}>Connect with us to use our Services</p>
                 <div className="sub-form">
                    <div className="option">
                         <label>First Name</label>

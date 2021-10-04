@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './registration.css';
-import {GoogleLoginButton} from "react-social-login-buttons";
+import {GoogleLogin} from 'react-google-login';
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import {useHistory} from "react-router-dom";
@@ -16,7 +16,10 @@ function Login() {
             password:password
         }
         axios.post("http://localhost:8000/user/login",data).then(response=>{
-            history.push("/")
+            history.push("/my/order")
+            localStorage.setItem("id",response.data.data._id)
+            localStorage.setItem("token",response.data.token)
+            localStorage.setItem("profile",response.data.token)
         }).catch(err=>{
             console.log(err);
         })
@@ -25,7 +28,7 @@ function Login() {
         <div className="form-container">
             <div className="form">
                 <h1>Login</h1>
-                <p>Connect with us to use our Services</p>
+                <p style={{color:"black"}}>Connect with us to use our Services</p>
                 <label>Email Address</label>
                 <input type="email" name="Email"  placeholder="Email" required="" value={email} onChange={(e)=>setEmail(e.target.value)} />
                 <label>Password</label>
@@ -36,7 +39,7 @@ function Login() {
                 </div>   
                 <button onClick={loginUser}>login</button>
                 <div className="social-account">Or Continue with your social account</div>
-                <GoogleLoginButton className="social-login" />
+                <GoogleLogin className="social-login" />
                 <div className="forget">
                     <Link to="/signup" className="label">Sign up</Link>
                     <span >|</span>

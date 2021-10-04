@@ -5,40 +5,40 @@ import './cards.css'
 function Cards() {
     return (
       <div className='cards'>
-        <h1>Check out these EPIC Destinations!</h1>
+        <h1>Check out these EPIC Services!</h1>
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
               <CardItem
                 src='images/blog_1.jpg'
-                text='Explore the hidden waterfall deep inside the Amazon Jungle'
-                label='Adventure'
+                text='Know about the warehousing and customer care facility'
+                label='Utilities'
                 path='/services'
               />
               <CardItem
                 src='images/blog_2.jpg'
-                text='Travel through the Islands of Bali in a Private Cruise'
+                text='Know about the air cargo shipping facility'
                 label='Luxury'
                 path='/services'
               />
             </ul>
             <ul className='cards__items'>
               <CardItem
-                src='images/person_3.jpg'
-                text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                label='Mystery'
+                src='https://cdn.pixabay.com/photo/2018/09/15/18/51/railway-3680077_960_720.jpg'
+                text='Place Your Order to Deliver it through Train'
+                label='Country to Country'
                 path='/services'
               />
               <CardItem
-                src='images/person_4.jpg'
-                text='Experience Football on Top of the Himilayan Mountains'
-                label='Adventure'
+                src='https://cdn.pixabay.com/photo/2020/06/02/00/03/truck-5248809_960_720.jpg'
+                text='Place Your Order to Deliver it through Truck'
+                label='City to City'
                 path='/products'
               />
               <CardItem
-                src='images/person_6.jpg'
-                text='Ride through the Sahara Desert on a guided camel tour'
-                label='Adrenaline'
+                src='https://cdn.pixabay.com/photo/2020/02/28/08/50/courier-driver-4886839_960_720.jpg'
+                text='Place Your Order for Home Delivery'
+                label='Door to Door'
                 path='/sign-up'
               />
             </ul>
